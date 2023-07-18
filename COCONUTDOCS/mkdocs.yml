@@ -10,7 +10,7 @@ plugins:
 
 
 theme:
-  name: material
+  name: readthedocs
   palette:
       - media: "(prefers-color-scheme: light)"
         scheme: default
