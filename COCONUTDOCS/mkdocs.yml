@@ -6,11 +6,12 @@ plugins:
             - en
             - ja
         separator: '[\s\-\.\u200b]+'
+    - git-revision-date
         
 
 
 theme:
-  name: readthedocs
+  name: material
   palette:
       - media: "(prefers-color-scheme: light)"
         scheme: default
@@ -23,6 +24,9 @@ theme:
         toggle:
           icon: material/weather-sunny
           name: 亮色模式
+  features:
+    - toc:
+      permalink: false
           
 markdown_extensions:
   - admonition #MkDocs 警告框
@@ -31,6 +35,20 @@ markdown_extensions:
   - pymdownx.caret #下划线
   - pymdownx.mark #文本高亮
   - pymdownx.tilde #删除线
+  - attr_list
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.superfences
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+
   - toc: # 大纲
       permalink: true
       slugify: !!python/name:pymdownx.slugs.uslugify
