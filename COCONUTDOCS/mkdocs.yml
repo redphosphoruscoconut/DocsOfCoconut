@@ -1,3 +1,10 @@
 site_name: 红磷椰子的Doc
 
-theme: readthedocs
+plugins:
+    - search:
+        lang:
+            - en
+            - ja
+        separator: '[\s\-\.]+'
+
+theme: material
