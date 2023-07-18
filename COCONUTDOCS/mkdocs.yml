@@ -24,11 +24,11 @@ theme:
         toggle:
           icon: material/weather-sunny
           name: 亮色模式
-  features:
-    - toc:
-      permalink: false
+
           
 markdown_extensions:
+  - toc:
+      permalink: true
   - admonition #MkDocs 警告框
   - footnotes #脚注
   - meta #自定义文章元数据
@@ -47,6 +47,7 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+
 
 
   - toc: # 大纲
