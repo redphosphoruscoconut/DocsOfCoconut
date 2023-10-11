@@ -393,4 +393,6 @@ Obsidian有众多的插件支持，这里我选择几个比较重要方便的插
 
 日历插件，可以创建日记等
 
+![Alt text](../../assets/Obsidian基础使用教学/loli.jpg)
+
 
