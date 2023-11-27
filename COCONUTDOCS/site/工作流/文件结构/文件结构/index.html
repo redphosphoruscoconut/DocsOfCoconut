@@ -438,9 +438,47 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          文件结构
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         文件结构
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#文件夹结构" class="md-nav__link">
+    文件夹结构
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#规范" class="md-nav__link">
+    规范
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -646,6 +684,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#文件夹结构" class="md-nav__link">
+    文件夹结构
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#规范" class="md-nav__link">
+    规范
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -660,6 +720,8 @@
 
 
 <h1 id="文件结构">文件结构<a class="headerlink" href="#文件结构" title="Permanent link">&para;</a></h1>
+<h2 id="文件夹结构">文件夹结构<a class="headerlink" href="#文件夹结构" title="Permanent link">&para;</a></h2>
+<p>项目文件大致遵循以下结构
 <div class="highlight"><pre><span></span><code>pro #项目文件夹
 ├─assets #项目资产
 │  ├─blender #blender资产
@@ -689,12 +751,13 @@
 │  └─tests #试验
 ├─episodes #剧集文件夹
 │  ├─ep01 #第一集
-│  │  ├─scene_01 #场景01
-│  │  │  ├─ep01_01_010 #镜头01
-│  │  │  └─ep01_01_020 
-│  │  └─scene_02 #场景02
-│  │      ├─ep01_02_010
-│  │      └─ep01_02_020
+│  │  ├─sq010 #序列1
+│  │  │  ├─render #渲染输出
+│  │  │  │  └─ep01_sq010_010_final_v001.####.exr
+│  │  │  ├─010_v001.blend #镜头01
+│  │  │  └─020_v001.blend #镜头02
+│  │  └─sq020 #序列2
+│  │     └─010.blend
 │  └─ep02
 ├─pre #预生产文件夹
 │  ├─assets #资产库
@@ -702,15 +765,21 @@
 │  │  └─char
 │  └─episodes
 │      ├─ep01
-│      │  ├─scene_01
-│      │  │  ├─ep01_01_010
-│      │  │  └─ep01_01_020
-│      │  └─scene_02
-│      │      ├─ep01_02_010
-│      │      └─ep01_02_020
+│      │  ├─sq010
+│      │  │  ├─010
+│      │  │  └─020
+│      │  └─sq020
+│      │     ├─010
+│      │     └─020
 │      └─ep02
-└─tools #项目工具
-</code></pre></div>
+└─tools #项目工具，如插件
+</code></pre></div></p>
+<h2 id="规范">规范<a class="headerlink" href="#规范" title="Permanent link">&para;</a></h2>
+<p>剧集内每一个序列中的一场可以包含多个镜头，其命名规则为<code>场号_场名(可选)_版本.blend</code>
+例如<code>剧集01第2序列第三场第二版blender文件</code>命名为<code>030_v002.blend</code></p>
+<p>渲染的图像序列命名规则为<code>剧集数_序列数_场数_渲染内容_版本号.帧序列.序列格式</code>
+如<code>剧集01第2序列第三场第二版背景场景渲染exr格式序列</code>名字为：<code>ep01_sq020_030_background_v001.####.exr</code>
+其中，ep是剧集episode的缩写，sq是序列sequence的缩写，background是指该段序列渲染内容是背景，####是帧序列格式</p>
 
   <hr>
 <div class="md-source-file">
